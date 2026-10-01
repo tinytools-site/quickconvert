@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://tinytools-site.github.io/quickconvert/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://tinytools-site.github.io/quickconvert/about.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tinytools-site.github.io/quickconvert/privacy.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tinytools-site.github.io/quickconvert/terms.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tinytools-site.github.io/quickconvert/contact.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tinytools-site.github.io/quickconvert/tools/currency-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tinytools-site.github.io/quickconvert/tools/timezone-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tinytools-site.github.io/quickconvert/tools/json-formatter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tinytools-site.github.io/quickconvert/tools/base64-encoder.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tinytools-site.github.io/quickconvert/tools/url-encoder.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tinytools-site.github.io/quickconvert/tools/color-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tinytools-site.github.io/quickconvert/tools/qr-code-generator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tinytools-site.github.io/quickconvert/tools/text-to-binary.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tinytools-site.github.io/quickconvert/tools/unix-timestamp-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tinytools-site.github.io/quickconvert/tools/lorem-ipsum-generator.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+</urlset>

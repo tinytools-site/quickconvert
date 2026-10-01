@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text to Binary Converter Online | QuickConvert</title>
+<meta name="description" content="Convert text to binary code and binary back to text. UTF-8 safe, instant results. Free online binary translator, no sign-up.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is text converted to binary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each character is encoded as UTF-8 bytes, and every byte is written as 8 binary digits. 'A' (byte 65) becomes 01000001."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my emoji longer in binary than a letter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "UTF-8 uses 1 byte for basic Latin letters but up to 4 bytes for emoji and many non-Latin scripts. More bytes means more binary digits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I decode binary back to text?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes \u2014 choose the binary-to-text mode. The input must contain only 0s and 1s with a total length that is a multiple of 8, and it must form valid UTF-8."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the 'no spaces' option do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It outputs one continuous bit stream instead of separating each byte with a space \u2014 useful when another tool expects compact binary input."
+      }
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Quick<b>Convert</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>Text to Binary Converter</h1>
+  <p class="tool-lead">Translate text into binary (0s and 1s) and decode binary back to readable text — UTF-8 safe, including emoji.</p>
+  <div class="tool-box">
+<div class="field">
+  <label for="bin-mode">Mode</label>
+  <select id="bin-mode">
+    <option value="encode">Text → Binary</option>
+    <option value="decode">Binary → Text</option>
+  </select>
+</div>
+<div class="field">
+  <label for="bin-delim">Byte separator</label>
+  <select id="bin-delim">
+    <option value="space">Spaces between bytes</option>
+    <option value="none">No spaces</option>
+  </select>
+</div>
+<div class="field">
+  <label for="bin-in">Input</label>
+  <textarea id="bin-in" rows="6" placeholder="Type text or paste binary…"></textarea>
+</div>
+<button class="btn" id="bin-go">Convert</button>
+<button class="btn secondary copy-btn" id="bin-copy" type="button">Copy result</button>
+<pre class="code" id="bin-out" style="display:none"></pre>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>How text becomes binary</h2>
+<p>Computers store everything as binary — sequences of 0s and 1s. Text is no exception: each character is first mapped to a number by an encoding standard, and that number is written in base 2. The dominant standard today is UTF-8, a clever variable-length encoding where common English letters use one byte (8 bits) and other scripts or emoji use up to four.</p>
+<p>For example, the letter 'A' is code point 65, which in binary is 01000001. The string 'Hi' becomes '01001000 01101001'. Because UTF-8 is backward compatible with ASCII, plain English text converts exactly the way classic textbooks describe, while emoji and non-Latin scripts simply use more bytes per character.</p>
+<p>This converter works at the byte level using UTF-8, so any text you paste — English, Arabic, Chinese, emoji — converts correctly and decodes back to the identical string. You can choose space-separated bytes for readability or a continuous stream of bits.</p>
+<p>Binary converters are popular for learning how computers represent data, for puzzles and CTF challenges, and for quick demonstrations in classrooms. Paste your text, convert, and copy the result — all processing happens locally in your browser.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>How is text converted to binary?</summary><p>Each character is encoded as UTF-8 bytes, and every byte is written as 8 binary digits. &#x27;A&#x27; (byte 65) becomes 01000001.</p></details>
+<details><summary>Why is my emoji longer in binary than a letter?</summary><p>UTF-8 uses 1 byte for basic Latin letters but up to 4 bytes for emoji and many non-Latin scripts. More bytes means more binary digits.</p></details>
+<details><summary>Can I decode binary back to text?</summary><p>Yes — choose the binary-to-text mode. The input must contain only 0s and 1s with a total length that is a multiple of 8, and it must form valid UTF-8.</p></details>
+<details><summary>What does the &#x27;no spaces&#x27; option do?</summary><p>It outputs one continuous bit stream instead of separating each byte with a space — useful when another tool expects compact binary input.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Quick<b>Convert</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free converters and everyday web utilities.
+      No sign-up. No downloads. Most tools run entirely in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 QuickConvert. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+function textToBinary(str, delim){
+  var sep = (delim === "none") ? "" : " ";
+  var bytes = new TextEncoder().encode(str), out = [], i;
+  for (i = 0; i < bytes.length; i++) out.push(bytes[i].toString(2).padStart(8, "0"));
+  return out.join(sep);
+}
+function binaryToText(bin){
+  var clean = String(bin).replace(/\s+/g, "");
+  if (clean === "") return {error:"Please enter some binary digits."};
+  if (!/^[01]+$/.test(clean)) return {error:"Input must contain only 0s and 1s."};
+  if (clean.length % 8 !== 0) return {error:"Binary length must be a multiple of 8."};
+  var bytes = new Uint8Array(clean.length / 8), i;
+  for (i = 0; i < bytes.length; i++) bytes[i] = parseInt(clean.slice(i*8, i*8+8), 2);
+  try { return {text: new TextDecoder("utf-8", {fatal:true}).decode(bytes)}; }
+  catch(e){ return {error:"Bytes do not form valid UTF-8 text."}; }
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var modeEl=document.getElementById("bin-mode"), delimEl=document.getElementById("bin-delim"),
+      inEl=document.getElementById("bin-in"), out=document.getElementById("bin-out");
+  document.getElementById("bin-go").addEventListener("click", function(){
+    if (modeEl.value === "encode"){
+      out.textContent = textToBinary(inEl.value, delimEl.value);
+    } else {
+      var r = binaryToText(inEl.value);
+      out.textContent = r.error ? "Error: " + r.error : r.text;
+    }
+    out.style.display = "block";
+  });
+  document.getElementById("bin-copy").addEventListener("click", function(){
+    if (out.style.display !== "none") navigator.clipboard.writeText(out.textContent);
+  });
+});
+</script>
+</body>
+</html>

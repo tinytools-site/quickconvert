@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>URL Encoder &amp; Decoder Online | QuickConvert</title>
+<meta name="description" content="URL-encode or decode any text or web address instantly. Handles special characters and Unicode. Free online, no sign-up.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does %20 mean in a URL?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a percent-encoded space. Each byte that is not allowed raw in a URL is written as '%' plus two hex digits \u2014 a space (byte 0x20) becomes %20."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I encode the whole URL or just the parameters?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Encode each parameter value separately. If you encode the entire URL, structural characters like '?', '=' and '&' get encoded as well and the link breaks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between encodeURI and encodeURIComponent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "encodeURIComponent encodes everything except a small safe set, making it right for parameter values. encodeURI leaves URL structure characters (?, &, #) intact, for encoding a full URL. This tool uses the stricter component encoding."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why did decoding fail with an error?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The input contains a malformed percent sequence \u2014 for example a '%' not followed by two hex digits. Check for truncated or double-encoded text."
+      }
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Quick<b>Convert</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>URL Encoder &amp; Decoder</h1>
+  <p class="tool-lead">Percent-encode special characters for URLs — or decode them back to readable text. Instant and private.</p>
+  <div class="tool-box">
+<div class="field">
+  <label for="url-in">Input</label>
+  <textarea id="url-in" rows="6" placeholder="Paste a URL or any text…"></textarea>
+</div>
+<button class="btn" id="url-encode">Encode</button>
+<button class="btn secondary" id="url-decode" type="button">Decode</button>
+<button class="btn secondary copy-btn" id="url-copy" type="button">Copy result</button>
+<pre class="code" id="url-out" style="display:none"></pre>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>What is URL encoding?</h2>
+<p>URLs can only safely contain a limited set of characters: letters, digits and a few symbols. Everything else — spaces, accented letters, emoji, characters like '&', '?' and '#' — must be percent-encoded, meaning each byte is written as a '%' followed by two hexadecimal digits. A space becomes %20, and 'café' becomes 'caf%C3%A9'.</p>
+<p>Encoding matters whenever you build links by hand, pass data in query strings, or generate slugs. An unencoded '&' inside a parameter value would be misread as the start of a new parameter, silently corrupting your data. Browsers encode form submissions automatically, but developers working with APIs often need to do it manually.</p>
+<p>This tool offers two operations: encode, which converts text into its percent-encoded form using UTF-8 (the web standard), and decode, which reverses the process. Decoding validates the input and reports an error on malformed sequences like a lone '%' at the end of the string, instead of producing garbage.</p>
+<p>A practical tip: encode each query parameter value separately, not the whole URL at once — otherwise the '?', '=' and '&' characters that structure the URL would get encoded too and the link would break. Everything here runs locally in your browser.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>What does %20 mean in a URL?</summary><p>It is a percent-encoded space. Each byte that is not allowed raw in a URL is written as &#x27;%&#x27; plus two hex digits — a space (byte 0x20) becomes %20.</p></details>
+<details><summary>Should I encode the whole URL or just the parameters?</summary><p>Encode each parameter value separately. If you encode the entire URL, structural characters like &#x27;?&#x27;, &#x27;=&#x27; and &#x27;&amp;&#x27; get encoded as well and the link breaks.</p></details>
+<details><summary>What is the difference between encodeURI and encodeURIComponent?</summary><p>encodeURIComponent encodes everything except a small safe set, making it right for parameter values. encodeURI leaves URL structure characters (?, &amp;, #) intact, for encoding a full URL. This tool uses the stricter component encoding.</p></details>
+<details><summary>Why did decoding fail with an error?</summary><p>The input contains a malformed percent sequence — for example a &#x27;%&#x27; not followed by two hex digits. Check for truncated or double-encoded text.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Quick<b>Convert</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free converters and everyday web utilities.
+      No sign-up. No downloads. Most tools run entirely in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 QuickConvert. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+function urlEncode(s){ return encodeURIComponent(s); }
+function urlDecode(s){
+  try { return {text: decodeURIComponent(s)}; }
+  catch(e){ return {error:"Invalid percent-encoding in input."}; }
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var inEl = document.getElementById("url-in"), out = document.getElementById("url-out");
+  document.getElementById("url-encode").addEventListener("click", function(){
+    out.textContent = urlEncode(inEl.value); out.style.display = "block";
+  });
+  document.getElementById("url-decode").addEventListener("click", function(){
+    var r = urlDecode(inEl.value);
+    out.textContent = r.error ? "Error: " + r.error : r.text;
+    out.style.display = "block";
+  });
+  document.getElementById("url-copy").addEventListener("click", function(){
+    if (out.style.display !== "none") navigator.clipboard.writeText(out.textContent);
+  });
+});
+</script>
+</body>
+</html>

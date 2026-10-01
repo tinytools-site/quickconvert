@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON Formatter &amp; Validator Online | QuickConvert</title>
+<meta name="description" content="Format, beautify, minify and validate JSON instantly. Clear error messages with positions. Free online JSON formatter, no sign-up.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is my JSON data uploaded to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All parsing and formatting happens locally in your browser with JavaScript. Nothing you paste ever leaves your device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my JSON fail to validate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most common causes are single quotes instead of double quotes, a trailing comma after the last element, or unescaped special characters inside strings. The error message shows the exact position of the problem."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between format and minify?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Format (beautify) adds indentation and line breaks so humans can read the structure. Minify removes all unnecessary whitespace to make the smallest possible file for production use. Both represent the same data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I validate JSON with comments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard JSON does not allow comments, so the validator will reject them. Remove // and /* */ comments before validating, or use a JSONC-aware editor if your config format needs comments."
+      }
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Quick<b>Convert</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>JSON Formatter &amp; Validator</h1>
+  <p class="tool-lead">Paste messy JSON to beautify it, minify it for production, or validate it with precise error messages.</p>
+  <div class="tool-box">
+<div class="field">
+  <label for="json-in">Paste your JSON</label>
+  <textarea id="json-in" rows="10" placeholder='{"name": "example", "items": [1, 2, 3]}'></textarea>
+</div>
+<button class="btn" id="json-format">Format</button>
+<button class="btn secondary" id="json-minify" type="button">Minify</button>
+<button class="btn secondary" id="json-validate" type="button">Validate</button>
+<button class="btn secondary" id="json-sample" type="button">Sample</button>
+<div class="result" id="json-result"></div>
+<pre class="code" id="json-out" style="display:none"></pre>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>How to format and validate JSON</h2>
+<p>JSON (JavaScript Object Notation) is the standard format for exchanging data between web services. It is strict: keys must be double-quoted, trailing commas are forbidden, and comments are not allowed. A single misplaced comma is enough to make an entire API request fail, which is why developers constantly need to validate and pretty-print JSON.</p>
+<p>This tool parses your input with a real JSON parser — the same strictness your code will face. If the JSON is valid, you can beautify it with readable indentation or minify it into a single compact line for use in production. If it is invalid, you get the exact error message and character position so you can fix it quickly.</p>
+<p>Common JSON mistakes include single quotes instead of double quotes, trailing commas after the last item in an object or array, unescaped line breaks inside strings, and comments copied from documentation. The 'Load sample' button gives you a valid example to experiment with if you are learning the format.</p>
+<p>Everything runs locally in your browser — your data is never uploaded anywhere, which makes this safe for pasting API responses containing sensitive information. For large payloads, the minify option shrinks the text by removing all unnecessary whitespace.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>Is my JSON data uploaded to a server?</summary><p>No. All parsing and formatting happens locally in your browser with JavaScript. Nothing you paste ever leaves your device.</p></details>
+<details><summary>Why does my JSON fail to validate?</summary><p>The most common causes are single quotes instead of double quotes, a trailing comma after the last element, or unescaped special characters inside strings. The error message shows the exact position of the problem.</p></details>
+<details><summary>What is the difference between format and minify?</summary><p>Format (beautify) adds indentation and line breaks so humans can read the structure. Minify removes all unnecessary whitespace to make the smallest possible file for production use. Both represent the same data.</p></details>
+<details><summary>Can I validate JSON with comments?</summary><p>Standard JSON does not allow comments, so the validator will reject them. Remove // and /* */ comments before validating, or use a JSONC-aware editor if your config format needs comments.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Quick<b>Convert</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free converters and everyday web utilities.
+      No sign-up. No downloads. Most tools run entirely in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 QuickConvert. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+function parseJson(text){
+  try { return {ok:true, value:JSON.parse(text)}; }
+  catch(e){ return {ok:false, error:String(e.message || e)}; }
+}
+function prettyJson(text, indent){
+  var r = parseJson(text);
+  if (!r.ok) return r;
+  return {ok:true, text:JSON.stringify(r.value, null, indent || 2)};
+}
+function minifyJson(text){
+  var r = parseJson(text);
+  if (!r.ok) return r;
+  return {ok:true, text:JSON.stringify(r.value)};
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var inEl = document.getElementById("json-in"), out = document.getElementById("json-out"),
+      res = document.getElementById("json-result");
+  function showErr(e){ res.innerHTML = "<p><b>Invalid JSON:</b> " + e.replace(/</g,"&lt;") + "</p>"; res.classList.add("show"); out.style.display = "none"; }
+  function showOk(msg, text){
+    res.innerHTML = "<p>" + msg + "</p>"; res.classList.add("show");
+    if (text !== undefined){ out.textContent = text; out.style.display = "block"; }
+    else { out.style.display = "none"; }
+  }
+  document.getElementById("json-format").addEventListener("click", function(){
+    var r = prettyJson(inEl.value);
+    if (!r.ok) showErr(r.error); else showOk("Valid JSON — formatted:", r.text);
+  });
+  document.getElementById("json-minify").addEventListener("click", function(){
+    var r = minifyJson(inEl.value);
+    if (!r.ok) showErr(r.error); else showOk("Valid JSON — minified (" + r.text.length + " chars):", r.text);
+  });
+  document.getElementById("json-validate").addEventListener("click", function(){
+    var r = parseJson(inEl.value);
+    if (!r.ok) showErr(r.error); else showOk("Valid JSON. No errors found.");
+  });
+  document.getElementById("json-sample").addEventListener("click", function(){
+    inEl.value = '{"user":{"name":"Ada","active":true,"scores":[98,87,93]},"tags":["dev","json"]}';
+  });
+});
+</script>
+</body>
+</html>

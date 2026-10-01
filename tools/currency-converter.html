@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Currency Converter — Live Exchange Rates | QuickConvert</title>
+<meta name="description" content="Convert currencies with live exchange rates: USD, EUR, GBP, JPY and 160+ more. Free currency converter, updated daily, no sign-up.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where do the exchange rates come from?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rates are fetched live from a free public exchange-rate API (open.er-api.com) and are typically updated once per day. They are mid-market rates \u2014 the midpoint between global buy and sell prices."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this currency converter free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, completely free with no sign-up and no usage limits. Your amount is converted locally in your browser after the rates are downloaded."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the mid-market rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The mid-market rate sits halfway between the price at which currencies are bought and sold on the open market. It is the fairest benchmark, but banks and transfer services add a margin, so you usually get a slightly worse rate in practice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my bank show a different rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Banks and card issuers add their own spread and fees on top of the mid-market rate. The difference \u2014 often 1\u20134% \u2014 is how they make money on currency exchange. This converter shows the benchmark rate before those margins."
+      }
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Quick<b>Convert</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>Currency Converter</h1>
+  <p class="tool-lead">Convert between world currencies using live mid-market exchange rates, refreshed daily. Free, fast and no sign-up.</p>
+  <div class="tool-box">
+<div class="field">
+  <label for="cur-amount">Amount</label>
+  <input type="number" id="cur-amount" value="100" step="any" min="0">
+</div>
+<div class="field-row">
+  <div class="field"><label for="cur-from">From</label><select id="cur-from"></select></div>
+  <div class="field"><label for="cur-to">To</label><select id="cur-to"></select></div>
+</div>
+<button class="btn" id="cur-go">Convert</button>
+<button class="btn secondary" id="cur-swap" type="button">⇄ Swap</button>
+<div class="result" id="cur-result"></div>
+<p style="color:#6b7280;font-size:.85rem;margin-top:10px" id="cur-meta">Loading live rates…</p>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>How currency conversion works</h2>
+<p>Exchange rates tell you how much one currency is worth in another. If the EUR/USD rate is 1.08, one euro buys 1.08 US dollars. Rates move constantly during the trading week as markets react to economic news, interest-rate decisions and global events, which is why converters use regularly updated rate feeds rather than fixed numbers.</p>
+<p>This converter fetches live mid-market rates from a free public exchange-rate API and converts your amount instantly in the browser. The mid-market rate is the midpoint between the buy and sell prices on the global currency markets — the fairest reference rate. Banks, card issuers and money-transfer services add their own margin on top, so the rate you actually get when exchanging money is usually slightly worse.</p>
+<p>To convert, enter an amount, pick the source and target currencies, and the tool multiplies your amount by the current rate. For example, converting 500 USD to EUR at a rate of 0.92 gives 460 EUR. Switching the base currency reloads the rate table, and the timestamp under the result shows when rates were last updated.</p>
+<p>Use this tool for travel budgeting, checking prices in foreign online stores, or getting a quick sense of invoice values in another currency. For actual transfers, always confirm the final rate with your bank or provider, since their margin and fees are not reflected here. Converted values are indicative, not financial advice.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>Where do the exchange rates come from?</summary><p>Rates are fetched live from a free public exchange-rate API (open.er-api.com) and are typically updated once per day. They are mid-market rates — the midpoint between global buy and sell prices.</p></details>
+<details><summary>Is this currency converter free to use?</summary><p>Yes, completely free with no sign-up and no usage limits. Your amount is converted locally in your browser after the rates are downloaded.</p></details>
+<details><summary>What is the mid-market rate?</summary><p>The mid-market rate sits halfway between the price at which currencies are bought and sold on the open market. It is the fairest benchmark, but banks and transfer services add a margin, so you usually get a slightly worse rate in practice.</p></details>
+<details><summary>Why does my bank show a different rate?</summary><p>Banks and card issuers add their own spread and fees on top of the mid-market rate. The difference — often 1–4% — is how they make money on currency exchange. This converter shows the benchmark rate before those margins.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Quick<b>Convert</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free converters and everyday web utilities.
+      No sign-up. No downloads. Most tools run entirely in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 QuickConvert. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+var QC_CURRENCIES = ["USD","EUR","GBP","JPY","CHF","CAD","AUD","NZD","CNY","INR","KRW","SGD","AED","SAR","MAD","EGP","TRY","BRL","MXN","ZAR","SEK","NOK"];
+var QC_RATES = null, QC_BASE = "USD", QC_TIME = "";
+function convertCurrency(amount, rate){
+  amount = parseFloat(amount);
+  if (isNaN(amount)) return {error:"Please enter a valid amount."};
+  if (!(rate > 0)) return {error:"Exchange rate unavailable right now."};
+  return {value: amount * rate};
+}
+function formatMoney(n, code){
+  try { return new Intl.NumberFormat("en-US",{style:"currency",currency:code}).format(n); }
+  catch(e){ return Number(n).toLocaleString("en-US",{maximumFractionDigits:2}) + " " + code; }
+}
+async function qcLoadRates(base){
+  var res = await fetch("https://open.er-api.com/v6/latest/" + encodeURIComponent(base));
+  if (!res.ok) throw new Error("rate request failed");
+  var data = await res.json();
+  if (data.result !== "success" || !data.rates) throw new Error("bad rate data");
+  return {rates:data.rates, time:data.time_last_update_utc || ""};
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var amtEl = document.getElementById("cur-amount"),
+      fromEl = document.getElementById("cur-from"), toEl = document.getElementById("cur-to"),
+      out = document.getElementById("cur-result"), meta = document.getElementById("cur-meta");
+  QC_CURRENCIES.forEach(function(c){
+    fromEl.add(new Option(c, c)); toEl.add(new Option(c, c));
+  });
+  fromEl.value = "USD"; toEl.value = "EUR";
+  function setMeta(t){ meta.textContent = t; }
+  async function refresh(base){
+    setMeta("Loading live rates…"); out.classList.remove("show");
+    try {
+      var r = await qcLoadRates(base);
+      QC_RATES = r.rates; QC_BASE = base; QC_TIME = r.time;
+      setMeta("Live mid-market rates" + (QC_TIME ? ", updated " + QC_TIME : "") + ". Indicative only.");
+    } catch(e){
+      QC_RATES = null;
+      setMeta("Could not load live rates. Check your internet connection and try again.");
+    }
+  }
+  function doConvert(){
+    if (!QC_RATES){ out.innerHTML = "<p>Rates are not loaded yet.</p>"; out.classList.add("show"); return; }
+    var to = toEl.value, rate = QC_RATES[to];
+    var res = convertCurrency(amtEl.value, rate);
+    if (res.error){ out.innerHTML = "<p>"+res.error+"</p>"; }
+    else {
+      out.innerHTML = '<div class="big">'+formatMoney(res.value, to)+'</div>' +
+        '<table><tr><td>Amount</td><td>'+formatMoney(parseFloat(amtEl.value), fromEl.value)+
+        '</td></tr><tr><td>Rate</td><td>1 '+fromEl.value+' = '+rate+' '+to+'</td></tr></table>';
+    }
+    out.classList.add("show");
+  }
+  document.getElementById("cur-go").addEventListener("click", doConvert);
+  document.getElementById("cur-swap").addEventListener("click", function(){
+    var t = fromEl.value; fromEl.value = toEl.value; toEl.value = t; refresh(fromEl.value);
+  });
+  fromEl.addEventListener("change", function(){ refresh(fromEl.value); });
+  refresh("USD");
+});
+</script>
+</body>
+</html>

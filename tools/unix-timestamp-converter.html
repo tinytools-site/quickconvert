@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UNIX Timestamp Converter Online | QuickConvert</title>
+<meta name="description" content="Convert UNIX timestamps to readable dates and dates back to epoch time. Auto-detects seconds vs milliseconds. Free, no sign-up.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the current UNIX timestamp?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Click the 'Use current time' button on the converter above \u2014 it shows right now as both seconds and milliseconds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between seconds and milliseconds timestamps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seconds timestamps have 10 digits (e.g. 1790860800); milliseconds have 13 (e.g. 1790860800000). JavaScript's Date.now() returns milliseconds. This tool auto-detects which one you pasted."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my timestamp show the wrong date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You probably mixed up seconds and milliseconds, or the timestamp is in a different unit (some systems use microseconds). Check the digit count: 10 = seconds, 13 = milliseconds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Year 2038 problem?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On systems that store timestamps as signed 32-bit integers, time overflows on 19 January 2038. Modern 64-bit systems and this converter handle far-future dates without issues."
+      }
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Quick<b>Convert</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>UNIX Timestamp Converter</h1>
+  <p class="tool-lead">Convert UNIX epoch timestamps to human-readable dates and back — seconds and milliseconds auto-detected.</p>
+  <div class="tool-box">
+<div class="field">
+  <label for="ts-in">UNIX timestamp</label>
+  <input type="text" id="ts-in" placeholder="e.g. 1790860800">
+</div>
+<button class="btn" id="ts-go">Timestamp → Date</button>
+<button class="btn secondary" id="ts-now" type="button">Use current time</button>
+<div class="result" id="ts-result"></div>
+<hr style="border:none;border-top:1px solid var(--border);margin:22px 0">
+<div class="field">
+  <label for="ts-dt">…or pick a date &amp; time → timestamp</label>
+  <input type="datetime-local" id="ts-dt">
+</div>
+<button class="btn" id="ts-back">Date → Timestamp</button>
+<div class="result" id="ts-result2"></div>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>What is a UNIX timestamp?</h2>
+<p>A UNIX timestamp (also called epoch time) counts the seconds elapsed since 00:00:00 UTC on 1 January 1970 — the 'epoch'. For example, 1790860800 represents 1 October 2026. Because it is a single number with no time zones, no daylight saving and no formatting ambiguity, it is the standard way computers store and exchange moments in time.</p>
+<p>You will meet timestamps in API responses, databases, log files and JWT tokens. They come in two flavors: seconds (10 digits, e.g. 1790860800) and milliseconds (13 digits, e.g. 1790860800000, common in JavaScript where Date.now() returns milliseconds). Mixing them up is a classic bug — a millisecond value read as seconds lands tens of thousands of years in the future.</p>
+<p>This converter accepts either flavor and detects it automatically, then shows the moment as both a UTC date and your local date and time. Going the other direction, pick any date and time to get its epoch value in seconds — handy when an API expects a timestamp parameter.</p>
+<p>One famous edge case: the 32-bit 'Year 2038 problem', when signed 32-bit timestamps overflow. Modern 64-bit systems are unaffected. All conversions here run locally in your browser with full 64-bit precision.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>What is the current UNIX timestamp?</summary><p>Click the &#x27;Use current time&#x27; button on the converter above — it shows right now as both seconds and milliseconds.</p></details>
+<details><summary>What is the difference between seconds and milliseconds timestamps?</summary><p>Seconds timestamps have 10 digits (e.g. 1790860800); milliseconds have 13 (e.g. 1790860800000). JavaScript&#x27;s Date.now() returns milliseconds. This tool auto-detects which one you pasted.</p></details>
+<details><summary>Why does my timestamp show the wrong date?</summary><p>You probably mixed up seconds and milliseconds, or the timestamp is in a different unit (some systems use microseconds). Check the digit count: 10 = seconds, 13 = milliseconds.</p></details>
+<details><summary>What is the Year 2038 problem?</summary><p>On systems that store timestamps as signed 32-bit integers, time overflows on 19 January 2038. Modern 64-bit systems and this converter handle far-future dates without issues.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Quick<b>Convert</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free converters and everyday web utilities.
+      No sign-up. No downloads. Most tools run entirely in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 QuickConvert. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+function tsToDate(ts){
+  var n = Number(String(ts).trim());
+  if (!isFinite(n)) return {error:"Please enter a valid number."};
+  var ms = Math.abs(n) < 1e11 ? n*1000 : n;
+  var d = new Date(ms);
+  if (isNaN(d.getTime())) return {error:"Invalid timestamp."};
+  return {date:d};
+}
+function dateToTs(dateStr){
+  var d = new Date(dateStr);
+  if (isNaN(d.getTime())) return {error:"Please pick a valid date and time."};
+  return {seconds: Math.floor(d.getTime()/1000)};
+}
+function fmtDateUTC(d){
+  return d.toUTCString();
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var inEl=document.getElementById("ts-in"), out=document.getElementById("ts-result"),
+      dtEl=document.getElementById("ts-dt"), out2=document.getElementById("ts-result2");
+  function show(r){
+    if (r.error){ out.innerHTML="<p>"+r.error+"</p>"; }
+    else {
+      var d=r.date;
+      out.innerHTML='<div class="big">'+Math.floor(d.getTime()/1000)+'</div>'+
+        '<table><tr><td>UTC</td><td>'+fmtDateUTC(d)+'</td></tr>'+
+        '<tr><td>Your local time</td><td>'+d.toString()+'</td></tr>'+
+        '<tr><td>Milliseconds</td><td>'+d.getTime()+'</td></tr></table>';
+    }
+    out.classList.add("show");
+  }
+  document.getElementById("ts-go").addEventListener("click", function(){ show(tsToDate(inEl.value)); });
+  document.getElementById("ts-now").addEventListener("click", function(){
+    var n=Date.now(); inEl.value=String(Math.floor(n/1000)); show(tsToDate(n));
+  });
+  document.getElementById("ts-back").addEventListener("click", function(){
+    var r=dateToTs(dtEl.value);
+    if (r.error){ out2.innerHTML="<p>"+r.error+"</p>"; }
+    else {
+      out2.innerHTML='<div class="big">'+r.seconds+'</div>'+
+        '<table><tr><td>Seconds</td><td>'+r.seconds+'</td></tr>'+
+        '<tr><td>Milliseconds</td><td>'+(r.seconds*1000)+'</td></tr></table>';
+    }
+    out2.classList.add("show");
+  });
+});
+</script>
+</body>
+</html>

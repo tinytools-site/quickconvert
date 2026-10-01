@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Converter — HEX, RGB, HSL | QuickConvert</title>
+<meta name="description" content="Convert colors between HEX, RGB and HSL instantly with a live preview. Free color converter for designers and developers.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between HEX and RGB?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They describe the same color: HEX writes the red, green and blue channels as hexadecimal pairs (#ff0000), while RGB writes them as decimals from 0\u2013255 (rgb(255, 0, 0)). Conversion is just a change of number base."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does HSL stand for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hue, Saturation, Lightness. Hue is the color's position on the color wheel (0\u2013360\u00b0), saturation is its intensity, and lightness is how bright or dark it is. It is often easier than RGB for designing palettes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do my brand colors look different on screen vs print?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Screens use RGB light while print uses CMYK ink \u2014 the two gamuts do not fully overlap. Some vivid screen colors simply cannot be printed. Always proof critical brand colors in their final medium."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I make a darker shade of a color?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In HSL, keep the hue and saturation and lower the lightness. This produces a natural darker shade of the same color without shifting its character."
+      }
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Quick<b>Convert</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>Color Converter</h1>
+  <p class="tool-lead">Convert any color between HEX, RGB and HSL with a live preview — pick visually or type values directly.</p>
+  <div class="tool-box">
+<div class="field-row">
+  <div class="field"><label for="col-hex">HEX</label>
+    <input type="text" id="col-hex" value="#0d9488" maxlength="7"></div>
+  <div class="field"><label for="col-pick">Pick a color</label>
+    <input type="color" id="col-pick" value="#0d9488" style="height:46px;padding:4px"></div>
+</div>
+<div class="swatch" id="col-swatch"></div>
+<div class="field-row">
+  <div class="field"><label>RGB</label>
+    <div class="field-row">
+      <input type="number" id="col-r" min="0" max="255" value="13" aria-label="Red">
+      <input type="number" id="col-g" min="0" max="255" value="148" aria-label="Green">
+      <input type="number" id="col-b" min="0" max="255" value="136" aria-label="Blue">
+    </div></div>
+  <div class="field"><label>HSL</label>
+    <div class="field-row">
+      <input type="number" id="col-h" min="0" max="360" value="175" aria-label="Hue">
+      <input type="number" id="col-s" min="0" max="100" value="84" aria-label="Saturation">
+      <input type="number" id="col-l" min="0" max="100" value="32" aria-label="Lightness">
+    </div></div>
+</div>
+<div class="result" id="col-result"></div>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>HEX, RGB and HSL explained</h2>
+<p>Digital colors can be described in several notations. HEX is the six-digit code web developers know best, like #0d9488 — each pair of digits sets the red, green and blue channels. RGB writes the same three channels as numbers from 0 to 255, e.g. rgb(13, 148, 136). HSL instead describes hue (0–360°), saturation and lightness as percentages, which matches how humans think about color.</p>
+<p>Converting between them is pure math. HEX and RGB are two spellings of the same thing, so switching is just a base change. HSL requires real computation: hue is derived from which channel dominates, while saturation and lightness describe color intensity and brightness. This tool does every conversion instantly as you type or pick.</p>
+<p>Designers often prefer HSL when building palettes, because adjusting lightness creates natural shades and tints of one hue, and shifting hue produces harmonious variations. Developers usually need HEX or RGB for CSS. Converting by hand is error-prone, which is why a converter belongs in every front-end bookmark bar.</p>
+<p>Use the color picker for visual selection or paste a HEX code from a design file. The preview swatch updates live, and every format is shown side by side, ready to copy into your stylesheet. All conversion runs locally in your browser.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>What is the difference between HEX and RGB?</summary><p>They describe the same color: HEX writes the red, green and blue channels as hexadecimal pairs (#ff0000), while RGB writes them as decimals from 0–255 (rgb(255, 0, 0)). Conversion is just a change of number base.</p></details>
+<details><summary>What does HSL stand for?</summary><p>Hue, Saturation, Lightness. Hue is the color&#x27;s position on the color wheel (0–360°), saturation is its intensity, and lightness is how bright or dark it is. It is often easier than RGB for designing palettes.</p></details>
+<details><summary>Why do my brand colors look different on screen vs print?</summary><p>Screens use RGB light while print uses CMYK ink — the two gamuts do not fully overlap. Some vivid screen colors simply cannot be printed. Always proof critical brand colors in their final medium.</p></details>
+<details><summary>How do I make a darker shade of a color?</summary><p>In HSL, keep the hue and saturation and lower the lightness. This produces a natural darker shade of the same color without shifting its character.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Quick<b>Convert</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free converters and everyday web utilities.
+      No sign-up. No downloads. Most tools run entirely in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 QuickConvert. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+function hexToRgb(hex){
+  var m = /^#?([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/.exec(String(hex).trim());
+  if (!m) return null;
+  var h = m[1];
+  if (h.length === 3) h = h[0]+h[0]+h[1]+h[1]+h[2]+h[2];
+  return {r:parseInt(h.slice(0,2),16), g:parseInt(h.slice(2,4),16), b:parseInt(h.slice(4,6),16)};
+}
+function rgbToHex(r,g,b){
+  function c(n){ n = Math.max(0, Math.min(255, Math.round(n))); var s = n.toString(16); return s.length===1 ? "0"+s : s; }
+  return "#" + c(r) + c(g) + c(b);
+}
+function rgbToHsl(r,g,b){
+  r/=255; g/=255; b/=255;
+  var max=Math.max(r,g,b), min=Math.min(r,g,b), h=0, s=0, l=(max+min)/2;
+  if (max!==min){
+    var d=max-min;
+    s = l>0.5 ? d/(2-max-min) : d/(max+min);
+    if (max===r) h=(g-b)/d+(g<b?6:0);
+    else if (max===g) h=(b-r)/d+2;
+    else h=(r-g)/d+4;
+    h*=60;
+  }
+  return {h:Math.round(h), s:Math.round(s*100), l:Math.round(l*100)};
+}
+function hslToRgb(h,s,l){
+  h=((h%360)+360)%360; s=Math.max(0,Math.min(100,s))/100; l=Math.max(0,Math.min(100,l))/100;
+  var k, a=s*Math.min(l,1-l);
+  function f(n){ k=(n+h/30)%12; return l - a*Math.max(-1,Math.min(k-3,Math.min(9-k,1))); }
+  return {r:Math.round(f(0)*255), g:Math.round(f(8)*255), b:Math.round(f(4)*255)};
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var hexEl=document.getElementById("col-hex"), pickEl=document.getElementById("col-pick"),
+      rEl=document.getElementById("col-r"), gEl=document.getElementById("col-g"), bEl=document.getElementById("col-b"),
+      hEl=document.getElementById("col-h"), sEl=document.getElementById("col-s"), lEl=document.getElementById("col-l"),
+      sw=document.getElementById("col-swatch"), out=document.getElementById("col-result"),
+      lock=false;
+  function render(rgb){
+    lock=true;
+    var hex=rgbToHex(rgb.r,rgb.g,rgb.b), hsl=rgbToHsl(rgb.r,rgb.g,rgb.b);
+    hexEl.value=hex; pickEl.value=hex;
+    rEl.value=rgb.r; gEl.value=rgb.g; bEl.value=rgb.b;
+    hEl.value=hsl.h; sEl.value=hsl.s; lEl.value=hsl.l;
+    sw.style.background=hex;
+    out.innerHTML='<table><tr><td>HEX</td><td>'+hex+'</td></tr>'+
+      '<tr><td>RGB</td><td>rgb('+rgb.r+', '+rgb.g+', '+rgb.b+')</td></tr>'+
+      '<tr><td>HSL</td><td>hsl('+hsl.h+', '+hsl.s+'%, '+hsl.l+'%)</td></tr></table>';
+    out.classList.add("show"); lock=false;
+  }
+  function fromHex(){ var rgb=hexToRgb(hexEl.value); if(rgb) render(rgb); }
+  function fromRgb(){ render({r:+rEl.value||0, g:+gEl.value||0, b:+bEl.value||0}); }
+  function fromHsl(){ render(hslToRgb(+hEl.value||0, +sEl.value||0, +lEl.value||0)); }
+  hexEl.addEventListener("input", function(){ if(!lock) fromHex(); });
+  pickEl.addEventListener("input", function(){ hexEl.value=pickEl.value; fromHex(); });
+  [rEl,gEl,bEl].forEach(function(e){ e.addEventListener("input", function(){ if(!lock) fromRgb(); }); });
+  [hEl,sEl,lEl].forEach(function(e){ e.addEventListener("input", function(){ if(!lock) fromHsl(); }); });
+  render({r:13,g:148,b:136});
+});
+</script>
+</body>
+</html>

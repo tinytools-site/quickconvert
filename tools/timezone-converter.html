@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timezone Converter — World Time Zones | QuickConvert</title>
+<meta name="description" content="Convert any date and time between world time zones instantly. Handles daylight saving automatically. Free online timezone converter.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does the converter handle daylight saving time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. It uses the browser's built-in time zone database, which includes current daylight saving rules, so conversions reflect the correct offset for the specific date you enter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What format should I enter the time in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the date-and-time picker, which produces a local date and time like 2026-10-01 14:30. That time is interpreted as wall-clock time in the 'from' time zone you selected."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do some places have half-hour offsets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A few zones, such as India (UTC+5:30) and Nepal (UTC+5:45), use offsets that are not whole hours for historical and geographical reasons. The converter handles these automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between GMT and UTC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For everyday conversion they are effectively the same \u2014 both mark the zero-offset reference. UTC is the precise modern standard, while GMT is the older astronomical term still used in names like 'GMT+1'."
+      }
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Quick<b>Convert</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>Timezone Converter</h1>
+  <p class="tool-lead">Convert a date and time from one time zone to another — daylight saving handled automatically. Plus live world clocks.</p>
+  <div class="tool-box">
+<div class="field">
+  <label for="tz-dt">Date &amp; time (in the "from" zone)</label>
+  <input type="datetime-local" id="tz-dt">
+</div>
+<div class="field-row">
+  <div class="field"><label for="tz-from">From time zone</label><select id="tz-from"></select></div>
+  <div class="field"><label for="tz-to">To time zone</label><select id="tz-to"></select></div>
+</div>
+<button class="btn" id="tz-go">Convert</button>
+<div class="result" id="tz-result"></div>
+<div class="live-clock" id="tz-clocks"></div>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>How time zone conversion works</h2>
+<p>The world is divided into time zones measured as offsets from Coordinated Universal Time (UTC). When it is 12:00 in London during winter (UTC+0), it is 07:00 in New York (UTC-5) and 21:00 in Tokyo (UTC+9). Converting between zones is a matter of shifting the same absolute moment by each zone's offset.</p>
+<p>Daylight saving time (DST) makes this trickier than simple addition. Many regions shift their clocks forward by an hour in summer — for example, New York moves from UTC-5 to UTC-4. The exact switch dates differ by country and change occasionally, so reliable conversion needs an up-to-date time zone database rather than memorized offsets.</p>
+<p>This converter uses your browser's built-in internationalization database, which tracks current DST rules for every region, to translate a local date and time in one zone into the matching local time in another. Enter the time as it appears on a clock in the source zone — a 14:30 meeting in Dubai, for instance — and see exactly what the clock shows in the target zone.</p>
+<p>Scheduling across zones is where most mistakes happen. A quick rule of thumb: always confirm meetings with both the local time and the zone abbreviation or UTC offset, e.g. '15:00 CET (UTC+1)'. This tool also shows live clocks for your selected zones, handy for a glance before you schedule across continents.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>Does the converter handle daylight saving time?</summary><p>Yes. It uses the browser&#x27;s built-in time zone database, which includes current daylight saving rules, so conversions reflect the correct offset for the specific date you enter.</p></details>
+<details><summary>What format should I enter the time in?</summary><p>Use the date-and-time picker, which produces a local date and time like 2026-10-01 14:30. That time is interpreted as wall-clock time in the &#x27;from&#x27; time zone you selected.</p></details>
+<details><summary>Why do some places have half-hour offsets?</summary><p>A few zones, such as India (UTC+5:30) and Nepal (UTC+5:45), use offsets that are not whole hours for historical and geographical reasons. The converter handles these automatically.</p></details>
+<details><summary>What is the difference between GMT and UTC?</summary><p>For everyday conversion they are effectively the same — both mark the zero-offset reference. UTC is the precise modern standard, while GMT is the older astronomical term still used in names like &#x27;GMT+1&#x27;.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Quick<b>Convert</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free converters and everyday web utilities.
+      No sign-up. No downloads. Most tools run entirely in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 QuickConvert. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+var QC_ZONES = [
+["UTC","UTC"],["New York","America/New_York"],["Chicago","America/Chicago"],
+["Denver","America/Denver"],["Los Angeles","America/Los_Angeles"],["Toronto","America/Toronto"],
+["Mexico City","America/Mexico_City"],["Bogota","America/Bogota"],["São Paulo","America/Sao_Paulo"],
+["London","Europe/London"],["Paris","Europe/Paris"],["Berlin","Europe/Berlin"],
+["Istanbul","Europe/Istanbul"],["Moscow","Europe/Moscow"],["Cairo","Africa/Cairo"],
+["Casablanca","Africa/Casablanca"],["Dubai","Asia/Dubai"],["Riyadh","Asia/Riyadh"],
+["Karachi","Asia/Karachi"],["Kolkata","Asia/Kolkata"],["Dhaka","Asia/Dhaka"],
+["Bangkok","Asia/Bangkok"],["Singapore","Asia/Singapore"],["Shanghai","Asia/Shanghai"],
+["Tokyo","Asia/Tokyo"],["Seoul","Asia/Seoul"],["Sydney","Australia/Sydney"],
+["Auckland","Pacific/Auckland"],["Azores","Atlantic/Azores"]];
+function tzOffsetMinutes(tz, utcMs){
+  var dtf = new Intl.DateTimeFormat("en-US",{timeZone:tz,hour12:false,
+    year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",second:"2-digit"});
+  var p = {};
+  dtf.formatToParts(new Date(utcMs)).forEach(function(x){ p[x.type]=x.value; });
+  var asUTC = Date.UTC(+p.year, +p.month-1, +p.day, (+p.hour)%24, +p.minute, +p.second);
+  return Math.round((asUTC - utcMs)/60000);
+}
+function zonedTimeToUtc(dateStr, tz){
+  var m = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})$/.exec(dateStr);
+  if (!m) return null;
+  var guess = Date.UTC(+m[1], +m[2]-1, +m[3], +m[4], +m[5]);
+  var off = tzOffsetMinutes(tz, guess);
+  var utc = guess - off*60000;
+  off = tzOffsetMinutes(tz, utc);
+  return guess - off*60000;
+}
+function formatInZone(utcMs, tz){
+  return new Intl.DateTimeFormat("en-US",{timeZone:tz,weekday:"short",year:"numeric",
+    month:"short",day:"numeric",hour:"2-digit",minute:"2-digit",hour12:false})
+    .format(new Date(utcMs));
+}
+function tzLabel(tz){ for (var i=0;i<QC_ZONES.length;i++) if (QC_ZONES[i][1]===tz) return QC_ZONES[i][0]; return tz; }
+document.addEventListener("DOMContentLoaded", function(){
+  var dtEl = document.getElementById("tz-dt"), fromEl = document.getElementById("tz-from"),
+      toEl = document.getElementById("tz-to"), out = document.getElementById("tz-result"),
+      clocks = document.getElementById("tz-clocks");
+  QC_ZONES.forEach(function(z){ fromEl.add(new Option(z[0], z[1])); toEl.add(new Option(z[0], z[1])); });
+  fromEl.value = "America/New_York"; toEl.value = "Europe/London";
+  var now = new Date(); now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+  dtEl.value = now.toISOString().slice(0,16);
+  function fmtOff(mins){
+    var s = mins < 0 ? "-" : "+"; mins = Math.abs(mins);
+    return "UTC" + s + String(Math.floor(mins/60)).padStart(2,"0") + ":" + String(mins%60).padStart(2,"0");
+  }
+  document.getElementById("tz-go").addEventListener("click", function(){
+    var utc = zonedTimeToUtc(dtEl.value, fromEl.value);
+    if (utc === null){ out.innerHTML = "<p>Please pick a valid date and time.</p>"; out.classList.add("show"); return; }
+    var offF = tzOffsetMinutes(fromEl.value, utc), offT = tzOffsetMinutes(toEl.value, utc);
+    out.innerHTML = '<div class="big">'+formatInZone(utc, toEl.value)+'</div>' +
+      '<table><tr><td>In '+tzLabel(toEl.value)+'</td><td>'+fmtOff(offT)+'</td></tr>' +
+      '<tr><td>Original ('+tzLabel(fromEl.value)+')</td><td>'+formatInZone(utc, fromEl.value)+' ('+fmtOff(offF)+')</td></tr>' +
+      '<tr><td>Difference</td><td>'+((offT-offF)/60).toFixed(1)+' hours</td></tr></table>';
+    out.classList.add("show");
+  });
+  function tick(){
+    var n = Date.now();
+    clocks.innerHTML = QC_ZONES.filter(function(z){ return z[1]===fromEl.value || z[1]===toEl.value; })
+      .map(function(z){
+        var t = new Intl.DateTimeFormat("en-US",{timeZone:z[1],hour:"2-digit",minute:"2-digit",second:"2-digit",hour12:false}).format(new Date(n));
+        return '<div class="clock-chip"><b>'+z[0]+'</b>'+t+'</div>';
+      }).join("");
+  }
+  fromEl.addEventListener("change", tick); toEl.addEventListener("change", tick);
+  tick(); setInterval(tick, 1000);
+});
+</script>
+</body>
+</html>

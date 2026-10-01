@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Base64 Encoder &amp; Decoder Online | QuickConvert</title>
+<meta name="description" content="Encode text to Base64 or decode Base64 back to text. Unicode-safe, instant, private. Free online Base64 converter, no sign-up.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Base64 encoding secure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Base64 is an encoding, not encryption \u2014 anyone can decode it in seconds. It only makes binary data safe to transport as text. Never rely on it to hide passwords or secrets."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do some Base64 strings end with '='?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Base64 works in 3-byte groups. If the input length is not a multiple of 3, '=' padding characters are added at the end to complete the final group. They are normal and expected."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this tool handle emoji and accented characters?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The encoder converts text to UTF-8 bytes first, so any Unicode character \u2014 emoji, Chinese, Arabic, accented letters \u2014 encodes and decodes correctly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My Base64 will not decode. Why?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most common cause is missing padding or characters outside the Base64 alphabet (often from copy-paste adding line breaks or spaces). The tool strips whitespace automatically and tells you if the input is still invalid."
+      }
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Quick<b>Convert</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>Base64 Encoder &amp; Decoder</h1>
+  <p class="tool-lead">Convert text to Base64 and back. Fully Unicode-safe (emoji included) — everything runs in your browser.</p>
+  <div class="tool-box">
+<div class="field">
+  <label for="b64-mode">Mode</label>
+  <select id="b64-mode">
+    <option value="encode">Text → Base64</option>
+    <option value="decode">Base64 → Text</option>
+  </select>
+</div>
+<div class="field">
+  <label for="b64-in">Input</label>
+  <textarea id="b64-in" rows="6" placeholder="Type or paste text here…"></textarea>
+</div>
+<button class="btn" id="b64-go">Convert</button>
+<button class="btn secondary copy-btn" id="b64-copy" type="button">Copy result</button>
+<pre class="code" id="b64-out" style="display:none"></pre>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>What is Base64 encoding?</h2>
+<p>Base64 is a way to represent binary data using only 64 safe text characters: A–Z, a–z, 0–9, plus '+' and '/'. It is used everywhere behind the scenes — email attachments, embedding images directly in web pages, API tokens and basic-auth credentials are all commonly Base64-encoded so they survive transport through systems that only handle plain text.</p>
+<p>Encoding is not encryption. Anyone can decode Base64 instantly, so it provides zero secrecy — it only solves the problem of moving binary or special characters through text-only channels. Never use Base64 to 'protect' passwords or sensitive data; use real encryption for that.</p>
+<p>This tool is Unicode-safe, which many simple converters are not. Characters like emoji or accented letters are first converted to their UTF-8 bytes and then encoded, so 'héllo 🌍' round-trips perfectly instead of producing garbled output. Decoding validates the input first and reports an error for malformed Base64 rather than guessing.</p>
+<p>Typical uses include encoding a small snippet for a data URL, decoding a JWT payload segment to inspect its claims, or preparing credentials for an HTTP Authorization header. Paste your text, choose encode or decode, and copy the result — nothing leaves your device.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>Is Base64 encoding secure?</summary><p>No. Base64 is an encoding, not encryption — anyone can decode it in seconds. It only makes binary data safe to transport as text. Never rely on it to hide passwords or secrets.</p></details>
+<details><summary>Why do some Base64 strings end with &#x27;=&#x27;?</summary><p>Base64 works in 3-byte groups. If the input length is not a multiple of 3, &#x27;=&#x27; padding characters are added at the end to complete the final group. They are normal and expected.</p></details>
+<details><summary>Does this tool handle emoji and accented characters?</summary><p>Yes. The encoder converts text to UTF-8 bytes first, so any Unicode character — emoji, Chinese, Arabic, accented letters — encodes and decodes correctly.</p></details>
+<details><summary>My Base64 will not decode. Why?</summary><p>The most common cause is missing padding or characters outside the Base64 alphabet (often from copy-paste adding line breaks or spaces). The tool strips whitespace automatically and tells you if the input is still invalid.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Quick<b>Convert</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free converters and everyday web utilities.
+      No sign-up. No downloads. Most tools run entirely in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 QuickConvert. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+function b64encode(str){
+  var bytes = new TextEncoder().encode(str), bin = "";
+  bytes.forEach(function(b){ bin += String.fromCharCode(b); });
+  return btoa(bin);
+}
+function b64decode(b64){
+  var clean = String(b64).replace(/\s+/g, "");
+  if (clean === "") return {error:"Please enter some Base64 text."};
+  if (!/^[A-Za-z0-9+/]*={0,2}$/.test(clean) || clean.length % 4 !== 0)
+    return {error:"Invalid Base64 input."};
+  try {
+    var bin = atob(clean), bytes = new Uint8Array(bin.length), i;
+    for (i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return {text: new TextDecoder("utf-8", {fatal:true}).decode(bytes)};
+  } catch(e){ return {error:"Invalid Base64 input."}; }
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var modeEl = document.getElementById("b64-mode"), inEl = document.getElementById("b64-in"),
+      out = document.getElementById("b64-out");
+  document.getElementById("b64-go").addEventListener("click", function(){
+    var v = inEl.value;
+    if (modeEl.value === "encode"){
+      if (!v){ out.style.display = "none"; return; }
+      out.textContent = b64encode(v); out.style.display = "block";
+    } else {
+      var r = b64decode(v);
+      if (r.error){ out.textContent = "Error: " + r.error; }
+      else { out.textContent = r.text; }
+      out.style.display = "block";
+    }
+  });
+  document.getElementById("b64-copy").addEventListener("click", function(){
+    if (out.style.display !== "none") navigator.clipboard.writeText(out.textContent);
+  });
+});
+</script>
+</body>
+</html>

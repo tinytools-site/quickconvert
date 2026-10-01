@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR Code Generator Online | QuickConvert</title>
+<meta name="description" content="Generate QR codes for URLs, text, WiFi and more. Download as PNG. Free online QR code generator, no sign-up.">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this QR code generator free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, completely free with no sign-up, no watermarks and no limits on how many codes you create."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does my text get uploaded to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The QR code is generated locally in your browser by a JavaScript library. Nothing you type ever leaves your device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much text can a QR code hold?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Up to about 4,000 alphanumeric characters, though shorter content creates simpler patterns that scan more reliably. For long URLs, consider a URL shortener first."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will the QR code expire?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A QR code is just an image encoding your text \u2014 it never expires and needs no subscription. It stops working only if the encoded URL itself goes offline."
+      }
+    }
+  ]
+}
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script></head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Quick<b>Convert</b><span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<!-- ADSENSE SLOT: header (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+
+<main class="container">
+<div class="tool-wrap">
+  <span class="badge">Free online tool</span>
+  <h1>QR Code Generator</h1>
+  <p class="tool-lead">Turn any text or URL into a scannable QR code — customize the size and download it as a PNG image.</p>
+  <div class="tool-box">
+<div class="field">
+  <label for="qr-text">Text or URL</label>
+  <input type="text" id="qr-text" value="https://quickconvert.example.com" placeholder="https://example.com">
+</div>
+<div class="field-row">
+  <div class="field"><label for="qr-size">Size</label>
+    <select id="qr-size">
+      <option value="160">Small (160px)</option>
+      <option value="256" selected>Medium (256px)</option>
+      <option value="512">Large (512px)</option>
+    </select></div>
+  <div class="field"><label for="qr-color">Color</label>
+    <select id="qr-color">
+      <option value="#111827">Black</option>
+      <option value="#0d9488">Teal</option>
+      <option value="#1d4ed8">Blue</option>
+    </select></div>
+</div>
+<button class="btn" id="qr-go">Generate QR Code</button>
+<a class="btn secondary" id="qr-dl" style="display:none;margin-left:8px" download="qrcode.png">Download PNG</a>
+<div class="qr-wrap" id="qr-wrap" style="display:none"></div>
+<p style="color:#6b7280;font-size:.85rem;margin-top:10px">Tip: test-scan the code with your phone camera before printing.</p>
+  </div>
+  <!-- ADSENSE SLOT: in-content (paste responsive ad code below) -->
+  <div class="ad-slot"></div>
+  <article class="article">
+    <h2>How QR codes work</h2>
+<p>QR (Quick Response) codes are two-dimensional barcodes that store information in a grid of black and white squares. Unlike traditional barcodes that hold a few dozen characters, a QR code can store thousands — a URL, a chunk of text, contact details or WiFi credentials — and any smartphone camera can read it in a fraction of a second.</p>
+<p>Creating one is straightforward: the encoder converts your text into binary, adds error-correction data, and arranges everything into the square pattern with its distinctive corner markers. Error correction is the clever part — a QR code can still be scanned even if up to 30% of it is damaged or obscured, which is why they work on crumpled receipts and faded posters.</p>
+<p>Common uses include linking print materials to websites, sharing WiFi passwords without dictating them, encoding payment addresses, and putting contact cards on business cards. For URLs, use the full address including https:// so scanners open the right page. Shorter content produces simpler, easier-to-scan codes.</p>
+<p>This generator builds your QR code entirely in your browser using an open-source JavaScript library — your text is never sent to a server. Choose a size, generate, test-scan it with your phone, and download the PNG for print or web use.</p>
+    <h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>Is this QR code generator free?</summary><p>Yes, completely free with no sign-up, no watermarks and no limits on how many codes you create.</p></details>
+<details><summary>Does my text get uploaded to a server?</summary><p>No. The QR code is generated locally in your browser by a JavaScript library. Nothing you type ever leaves your device.</p></details>
+<details><summary>How much text can a QR code hold?</summary><p>Up to about 4,000 alphanumeric characters, though shorter content creates simpler patterns that scan more reliably. For long URLs, consider a URL shortener first.</p></details>
+<details><summary>Will the QR code expire?</summary><p>No. A QR code is just an image encoding your text — it never expires and needs no subscription. It stops working only if the encoded URL itself goes offline.</p></details>
+</div>
+  </article>
+</div>
+</main>
+<!-- ADSENSE SLOT: footer (paste responsive ad code below) -->
+<div class="ad-slot container"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="footer-brand">Quick<b>Convert</b>.</div>
+      <p style="max-width:340px;font-size:.9rem">Free converters and everyday web utilities.
+      No sign-up. No downloads. Most tools run entirely in your browser.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="copyright">&copy; 2026 QuickConvert. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+function qrConfig(text, size, color){
+  return {text:String(text), width:+size, height:+size, colorDark:color, colorLight:"#ffffff", correctLevel:1};
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var textEl=document.getElementById("qr-text"), sizeEl=document.getElementById("qr-size"),
+      colorEl=document.getElementById("qr-color"), wrap=document.getElementById("qr-wrap"),
+      dl=document.getElementById("qr-dl");
+  document.getElementById("qr-go").addEventListener("click", function(){
+    var t=textEl.value.trim();
+    if(!t){ return; }
+    if (typeof QRCode === "undefined"){
+      wrap.style.display="block";
+      wrap.innerHTML="<p>QR library failed to load. Check your internet connection and try again.</p>";
+      return;
+    }
+    wrap.innerHTML=""; wrap.style.display="flex";
+    var cfg=qrConfig(t, sizeEl.value, colorEl.value);
+    new QRCode(wrap, {text:cfg.text, width:cfg.width, height:cfg.height,
+      colorDark:cfg.colorDark, colorLight:cfg.colorLight, correctLevel:QRCode.CorrectLevel.M});
+    setTimeout(function(){
+      var img=wrap.querySelector("img"), canvas=wrap.querySelector("canvas"), src=null;
+      if (img && img.src) src=img.src;
+      else if (canvas && canvas.toDataURL) src=canvas.toDataURL("image/png");
+      if (src){ dl.href=src; dl.style.display="inline-block"; }
+    }, 300);
+  });
+});
+</script>
+</body>
+</html>
